@@ -63,7 +63,7 @@ app.use(express.static(path.join(__dirname, 'app_client')));
 app.use('/api', routesApi);
 
 app.use(function(req, res) {
-  res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
+  res.sendFile(path.join(__dirname, 'app_client', 'index.html'), { root: __dirname });
 });
 
 // catch 404 and forward to error handler
